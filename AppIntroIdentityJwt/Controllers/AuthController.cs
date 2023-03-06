@@ -113,16 +113,17 @@ namespace AppIntroIdentityJwt.Controllers
             }
             return null;
         }
+
+
+        [HttpPost]
+        [Route("Logout")]
+        public async Task<IActionResult> Logout()
+        {
+            // Well, What do you want to do here ?
+            // Wait for token to get expired OR
+            // Maintain token cache and invalidate the tokens after logout method is called
+            return Ok(new { Token = "", Message = "Logged Out" });
+        }
     }
 
-    [HttpPost]
-    [Route("Logout")]
-    public async Task<IActionResult> Logout()
-    {
-        // Well, What do you want to do here ?
-        // Wait for token to get expired OR
-        // Maintain token cache and invalidate the tokens after logout method is called
-
-        return Ok(new { Token = "", Message = "Logged Out" });
-    }
 }
