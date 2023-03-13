@@ -10,6 +10,7 @@ namespace AppIntroIdentityJwt.Data
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
+
         public DbSet<Student> Students { get; set; }
         public DbSet<Product> Products { get; set; }
     }
